@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
-
+  CurrentTraining = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  currentTraining(value) {
+    this.CurrentTraining = value;
+  }
 }
