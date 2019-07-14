@@ -15,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing-module';
 import { FormsModule } from '@angular/forms';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     FlexLayoutModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
