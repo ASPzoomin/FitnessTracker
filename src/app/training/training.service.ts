@@ -6,8 +6,13 @@ export class TrainingService {
         {id:'pushups',name:'Pushups',duration:20,calories:28},
         {id:'touchtoes',name:'Touchtoes',duration:25,calories:18},
     ];
+    private runningExercise:Exercise;
 
     getAvailableExercises() {
         return this.availableExercises;
+    }
+
+    startExercise(selectedExercise: string) {
+        this.runningExercise = this.availableExercises.find(ex =>ex.id === selectedExercise);
     }
 }
