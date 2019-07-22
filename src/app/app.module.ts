@@ -16,7 +16,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { FormsModule } from '@angular/forms';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
+import { AngularFireModule } from '@angular/fire';
 import { TrainingService } from './training/training.service';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { TrainingService } from './training/training.service';
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [AuthService,TrainingService],
   bootstrap: [AppComponent],
